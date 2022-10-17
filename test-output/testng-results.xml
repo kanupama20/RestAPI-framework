@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-16T20:07:31 CDT" name="Suite" finished-at="2022-10-16T20:07:35 CDT" duration-ms="3490">
+    <groups>
+    </groups>
+    <test started-at="2022-10-16T20:07:31 CDT" name="Test" finished-at="2022-10-16T20:07:35 CDT" duration-ms="3490">
+      <class name="com.tests.test.TekarchApiExamScript">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.tests.test.TekarchApiExamScript@1de76cc7]" started-at="2022-10-16T20:07:31 CDT" name="setup" finished-at="2022-10-16T20:07:32 CDT" duration-ms="569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="TC_03_delete_employee()[pri:0, instance:com.tests.test.TekarchApiExamScript@1de76cc7]" started-at="2022-10-16T20:07:32 CDT" name="TC_03_delete_employee" finished-at="2022-10-16T20:07:35 CDT" duration-ms="2873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_delete_employee -->
+      </class> <!-- com.tests.test.TekarchApiExamScript -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

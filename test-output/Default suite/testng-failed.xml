@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.tests.test.TekarchApiExamScript">
+        <methods>
+          <include name="TC_01_get_all_Employee"/>
+          <include name="setup"/>
+          <include name="TC_04_delete_nonExisting_employee"/>
+          <include name="TC_03_delete_employee"/>
+          <include name="TC_02_create_employee"/>
+          <include name="TC_05_get_single_Employee"/>
+        </methods>
+      </class> <!-- com.tests.test.TekarchApiExamScript -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
