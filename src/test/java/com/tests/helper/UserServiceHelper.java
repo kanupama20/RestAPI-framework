@@ -2,13 +2,12 @@ package com.tests.helper;
 
 import java.io.IOException;
 
+import com.aventstack.extentreports.Status;
 import com.tests.constants.EndPoints;
 import com.tests.model.Create_Employee_Response_POJO;
 import com.tests.model.Data;
 import com.tests.model.Get_Eployee_Response_POJO;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -24,7 +23,7 @@ import com.tests.utility.GenerateReports;
 
 public class UserServiceHelper extends ReusableMethods{
 
-	//public static GenerateReports report = null;
+	public static GenerateReports report = null;
 	//public static Logger Logger = LogManager.getLogger(UserServiceHelper.class);
 	
 	public static String get_base_uri() {
@@ -42,7 +41,8 @@ public class UserServiceHelper extends ReusableMethods{
 		String status = res1.getStatus();
 		Assert.assertEquals(status, "success");
 		System.out.println("Test case 1 pass");
-		//report.logTestInfo("All employee reports displayed");
+		report.logTestInfo("All employee reports displayed");
+		
 	}
 	
 	public static void validate_create_employee(Response res) {
@@ -61,7 +61,7 @@ public class UserServiceHelper extends ReusableMethods{
 		Assert.assertEquals(data.getName(), "test");
 		Assert.assertEquals(salary, "123");
 		Assert.assertEquals(age, "23");	
-		//report.logTestInfo("employee created");
+		report.logTestInfo("employee created");
 	}
 	
 	public static int  get_Created_id() {
@@ -82,7 +82,7 @@ public class UserServiceHelper extends ReusableMethods{
 		Data data = res1.getData();
 		int created_id = data.getId();
 		System.out.println("Created id = "+ created_id);
-		//report.logTestInfo("returning employee id");
+		report.logTestInfo("returning employee id");
 		return created_id;
 	}
 	
@@ -97,7 +97,7 @@ public class UserServiceHelper extends ReusableMethods{
 		Assert.assertEquals(id1, created_id); 
 		String msg = res.jsonPath().get("message"); 
 		System.out.println("Message = "+ msg);
-		//report.logTestInfo("Deleted an employee data.");
+		report.logTestInfo("Deleted an employee data.");
 	}
 	
 	
@@ -108,7 +108,7 @@ public class UserServiceHelper extends ReusableMethods{
 		  res.then().body("status",Matchers.equalTo("error"));
 		  String msg = res.jsonPath().get("message");
 		  System.out.println("Deleting non existing employee message = "+msg);	
-		  //report.logTestInfo("showing correct message for deleting nonexistaning employee.");
+		  report.logTestInfo("showing correct message for deleting nonexistaning employee.");
 	}
 	
 	public static void validate_single_employee(Response res) {
@@ -123,7 +123,7 @@ public class UserServiceHelper extends ReusableMethods{
 		Assert.assertEquals(name, "Garrett Winters");
 		Assert.assertEquals(age, 63);
 		Assert.assertEquals(salary, 170750);		
-		//report.logTestInfo("correct information of selected employee displayed.");
+		report.logTestInfo("correct information of selected employee displayed.");
 	}
 	
 }

@@ -6,10 +6,11 @@
       <class name="com.tests.test.TekarchApiExamScript">
        <methods>
       <include name = "TC_01_get_all_Employee" />
-      <exclude name = "TC_02_create_employee" />
-      <exclude name = "TC_03_delete_employee" />
-      <exclude name = "TC_04_delete_nonExisting_employee" />
-      <exclude name = "TC_05_get_single_Employee" />
+     <!-- <include name = "TC_02_create_employee" />
+      <include name = "TC_03_delete_employee" />
+      <include name = "TC_04_delete_nonExisting_employee" />
+      <include name = "TC_05_get_single_Employee" />
+      --> 
       </methods>
         </class>
     </classes>

@@ -30,10 +30,10 @@ public class GenerateReports {
 		htmlReporter = new ExtentHtmlReporter(Constants.GENERATE_REPORT_PATH);
 		extent = new ExtentReports();
 		htmlReporter.config().setDocumentTitle("Test Execution Report");
-		htmlReporter.config().setReportName("Salesforce regression tests");
+		htmlReporter.config().setReportName("Api tests");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("Host Name", "Salesforce");
+		extent.setSystemInfo("Host Name", "ApiTest");
 		extent.setSystemInfo("Environment", "Automation Testing");
 		extent.setSystemInfo("User Name", "Kalyani");
 	}

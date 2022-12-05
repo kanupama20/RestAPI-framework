@@ -5,8 +5,12 @@
     <classes>
       <class name="com.tests.test.TekarchApiExamScript">
         <methods>
+          <include name="teardown"/>
           <include name="setup"/>
+          <include name="setupBeforeTest"/>
           <include name="TC_03_delete_employee"/>
+          <include name="TC_02_create_employee"/>
+          <include name="TC_04_delete_nonExisting_employee"/>
         </methods>
       </class> <!-- com.tests.test.TekarchApiExamScript -->
     </classes>
